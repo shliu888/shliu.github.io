@@ -1,10 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Awesome Project Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shu-Hao Liu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello, World! This is my GitHub Project Site!</h1>
-    <p>Look at you, getting things deployed!</p>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="#">YourName</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://github.com/shliu888" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <img src="https://via.placeholder.com/150" alt="Your Profile Picture" class="profile-pic">
+            <h2>Hello, I'm [Your Name]</h2>
+            <p class="tagline">A passionate AI enthusiast creating awesome things!</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h3>About Me</h3>
+            <p>
+                Welcome to my digital playground! I'm Shu-Hao, an AI enthusiast with a knack for [Your Key Skill]. I love [Your Hobby/Interest] and am always eager to learn new things. My journey in [Your Field] began when [brief story/motivation].
+            </p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h3>My Projects</h3>
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 1 Thumbnail">
+                    <h4>Project Title One</h4>
+                    <p>A brief description of Project One, highlighting key technologies or outcomes. This was a fun challenge!</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank" class="btn project-btn">View Code</a>
+                    <a href="#" target="_blank" class="btn project-btn">Live Demo</a> </div>
+                <div class="project-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 2 Thumbnail">
+                    <h4>Project Title Two</h4>
+                    <p>Description for Project Two. What did you learn? What problem did it solve? Keep it concise!</p>
+                    <a href="https://github.com/yourusername/project2" target="_blank" class="btn project-btn">View Code</a>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h3>Get In Touch</h3>
+            <p>Have a question or want to work together? Feel free to reach out!</p>
+            <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">Twitter</a>
+                </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
