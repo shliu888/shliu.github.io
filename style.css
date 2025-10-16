@@ -337,4 +337,47 @@ section:nth-child(even) { /* Alternate background for better visual separation *
     .contact-form button {
         align-self: stretch; /* Make button full width */
     }
+    /* Container for the side-by-side layout */
+.project-grid {
+    display: flex; /* 1. Turn on Flexbox */
+    gap: 20px; /* 2. Add space between the project items */
+    justify-content: space-between; /* 3. Distribute space evenly (optional) */
+    flex-wrap: wrap; /* 4. Allow wrapping for smaller screens */
+}
+
+/* Styling for each project card */
+.project-item {
+    /* Each item will take up slightly less than 50% to account for the 'gap' */
+    flex: 1 1 48%; /* flex-grow: 1, flex-shrink: 1, basis: 48% */
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Optional: gives a nice lift effect */
+    background-color: #ffffff;
+    
+    /* Ensure the button is at the bottom (optional, but good practice) */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push the button to the bottom of the card */
+.project-item p {
+    flex-grow: 1; /* Makes the paragraph take up available vertical space */
+}
+
+.project-item .project-btn {
+    margin-top: 15px; /* Add some space above the button */
+    align-self: flex-start; /* Aligns button to the left */
+}
+
+/* Optional: Make them stack vertically on very small mobile screens */
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+    }
+    .project-item {
+        /* On small screens, take up the full width */
+        flex: 1 1 100%;
+    }
+}
 }
